@@ -36,3 +36,28 @@ const myFunction = function(){
 }
 
 // https://tc39.es/ecma262/#sec-ecmascript-language-types
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++//
+//STACK AND HEAP//
+
+
+//Stack(Primitive ==> gets copy).  Heap(Non-Primitive ==> gets reference)
+
+let myname = "Saniya"
+let firstname = myname
+firstname = "Bobby"
+console.log(myname);
+console.log(firstname);
+
+
+let userOne = {
+    email : "xyz@google.com",
+    upiID : "abc@sbi"
+}
+
+let userTwo = userOne
+userTwo.email = "san@amazon.in"
+console.log(userOne.email);
+console.log(userTwo.email);
