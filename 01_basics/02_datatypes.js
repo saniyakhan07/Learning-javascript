@@ -22,4 +22,4 @@ let value = null
 
 console.log(typeof null);  // typeof null is object
 
-console.log(typeof undefined);   //type of undefined is undefined
+console.log(typeof undefined);   //typeof undefined is undefined
