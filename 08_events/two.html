@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async JS</h1>
+    <button id="stop"> Stop</button>
+</body>
+<script>
+
+    //setTimeout executes the function 1 time
+    // setTimeout(function(){
+    //     console.log("Saniya");
+    // },2000);
+
+    //setInterval executes the function recursively multiple times
+    // setInterval(function(){
+    //     console.log("Saniya Khan");
+    // },3000);
+
+
+    const saySaniya = function(){
+        console.log("Saniya");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Saniya Learning"
+    }
+   const changeMe = setTimeout(changeText, 2000)
+
+   document.querySelector('#stop').addEventListener('click', function(){
+    clearTimeout(changeMe)
+    console.log("STOPPED");
+   })
+
+   // clearTimeout is used to stop the execution defined in setTimeout 
+    </script>
+</html>
+
+
+
+// NOTES
+SetTimeout(function/function reference,milliseconds) 
+ClearTimeout(variable which hold the reference of settimeout)
+SetInterval(function /functiom reference, milisecond) - repeat until we clear it. 
+ClearInterval(reverence of function)
